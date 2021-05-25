@@ -1,0 +1,7 @@
+.row{
+    display: flex;
+    padding: 20px;
+    width: 80%;
+    overflow: scroll;
+    margin: 0 auto;
+}
