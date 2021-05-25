@@ -1,0 +1,55 @@
+.movieDetails{
+    display: flex;
+    flex-direction: column;
+}
+
+.movieDetails__Conatiner{
+    display: flex;
+    width: 80%;
+    margin: 2rem auto;
+    justify-content:space-between
+}
+
+
+.movieDetails__Conatiner img{
+    height:400px;
+    width:400px;
+    object-fit:contain
+}
+
+.movieDetails__textContainer{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    text-align: flex-start;
+    margin-left: 20px;
+}
+
+.movieDetails__textContainer span{
+    font-size:1rem;
+    font-weight:700;
+    text-transform: uppercase
+}
+
+.movieDetails__actors{
+    display: flex;
+    overflow-x: scroll;
+    padding:5px;
+    min-height:150px
+}
+
+.movieDetails__actorsCard{
+    height: 100px;
+    width:100px;
+    
+}
+
+.movieDetails__actorsCard img{
+    height:100px;
+    width:80px;
+    object-fit:contain;
+}
+
+.movieDetails__actorsCard h1{
+    font-size:0.6rem
+}

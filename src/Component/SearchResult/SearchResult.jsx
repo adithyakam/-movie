@@ -13,6 +13,7 @@ function SearchResult({movie}) {
                          title={ele.title} 
                          rating={ele.vote_average}
                         poster={ele.poster_path}
+                        ele={ele}
                         />
                     })
                 }

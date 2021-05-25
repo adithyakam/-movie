@@ -35,6 +35,7 @@ function Row(props) {
                                         title={ele.title} 
                                         rating={ele.vote_average}
                                         poster={ele.poster_path}
+                                        ele={ele}
                             />
                             //  return<h1>{ele.title}</h1>
                         })
