@@ -21,7 +21,7 @@ function Row(props) {
     },[])
 
 
-    console.log(rowMovies);
+    // console.log(rowMovies);
 
     return (
         <div className="row">
