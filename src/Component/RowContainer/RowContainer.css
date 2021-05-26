@@ -1,0 +1,9 @@
+.rowContainer h7{
+    font-size:1.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.rowContainer{
+    margin-top:2rem;
+}

@@ -4,11 +4,13 @@ import './Header.css'
 
 import {API_KEY} from "../../tmdb.api"
 import { connect } from 'react-redux'
-import { addMovie } from '../../Redux/movieReducer/movieReducer.action'
+import {addSearchedMovie} from '../../Redux/searchMovie/SearchMovie.action'
+import { useHistory } from 'react-router'
 
 function Header(props) {
 
-    const {addMovie} =props
+    const  history=useHistory()
+    const {addSearchedMovie} =props
     // console.log(addMovie);
 
     const [movie, setmovie] = useState("")
@@ -23,9 +25,10 @@ function Header(props) {
         .then(res=>res.json())
         .then(res=>{
             console.log(res);
-            props.addMovie(res)
+            addSearchedMovie(res.results)
         })
         .catch(err=>alert(err))
+        history.push('/search')
         setmovie("")
     }
 
@@ -44,7 +47,7 @@ function Header(props) {
 
 const mapDispatchToProps=(dispatch)=>{
     return{
-        addMovie:(movie)=>dispatch(addMovie(movie))
+        addSearchedMovie:(movie)=>dispatch(addSearchedMovie(movie))
     }
 }
 

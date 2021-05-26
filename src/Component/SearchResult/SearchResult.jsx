@@ -1,13 +1,32 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
+import { useHistory } from 'react-router'
 import Card from '../Card/Card'
 
 import "./SearchResult.css"
 
-function SearchResult({movie}) {
+function SearchResult({movies}) {
+
+    const history=useHistory()
+
+    // useEffect(() => {
+    //   if(movies.length==0){
+    //     history.push('/')
+    //   }
+    // }, [])
+
+
+
     return (
         <div className='searchresult'>
                 {
-                    movie.map(ele=>{
+                    (movies.length==0)?(
+                        <h1>no movies  </h1>
+                    ):(<></>)
+                }
+
+                {
+                    movies?.map(ele=>{
                         return <Card
                         key={ele.id}
                          title={ele.title} 
@@ -22,4 +41,13 @@ function SearchResult({movie}) {
     )
 }
 
-export default SearchResult
+
+
+
+const mapStateToProps=(state)=>{
+    return{
+      movies:state.movies.movies
+    }
+  }
+
+export default connect(mapStateToProps)(SearchResult)

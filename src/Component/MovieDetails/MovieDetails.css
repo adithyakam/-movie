@@ -14,7 +14,8 @@
 .movieDetails__Conatiner img{
     height:400px;
     width:400px;
-    object-fit:contain
+    object-fit:contain;
+    border:1px solid black;
 }
 
 .movieDetails__textContainer{
@@ -22,7 +23,22 @@
     flex-direction:column;
     justify-content: space-around;
     text-align: flex-start;
+    align-items: flex-start;
     margin-left: 20px;
+}
+
+.movieDetails__textContainerDesc{
+    display: flex;
+    width:80%;
+    /* display: inline-block; */
+    align-items:flex-start;
+
+}
+
+.movieDetails__textContainerDesc p{
+    width:70%;
+    margin:0 0 0 30px;
+    text-align:justify;
 }
 
 .movieDetails__textContainer span{
@@ -35,13 +51,21 @@
     display: flex;
     overflow-x: scroll;
     padding:5px;
-    min-height:150px
+    min-height:150px;
+
 }
+
+.movieDetails__actors::-webkit-scrollbar{
+    display: none;
+}
+
 
 .movieDetails__actorsCard{
     height: 100px;
     width:100px;
-    
+    /* padding: 5px; */
+    border:1px solid black;
+    margin:3px;
 }
 
 .movieDetails__actorsCard img{

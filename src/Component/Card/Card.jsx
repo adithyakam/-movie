@@ -1,16 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux';
+import { useHistory } from 'react-router';
 import {setSelectedMovie} from '../../Redux/selectedMovieReducer/selectedMovie.action'
 
 import "./Card.css"
 
 function Card(props) {
 
-    
-const {title,rating,poster,ele,setSelectedMovie}=props;
+   const  history=useHistory()
+   const {title,rating,poster,ele,setSelectedMovie}=props;
+
+   
+
+
+
 
     const handleClick=()=>{
         setSelectedMovie(ele)
+        history.push("/moviedetails")
     }
 
 // console.log(title,rating,poster);
