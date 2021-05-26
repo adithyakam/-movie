@@ -4,3 +4,9 @@
     align-items:center;
     justify-content:space-around;
 }
+
+.header input{
+    padding:5px;
+    border-radius:3px;
+    border:1px solid rgb(44, 44, 44);
+}

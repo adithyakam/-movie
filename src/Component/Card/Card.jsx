@@ -10,11 +10,6 @@ function Card(props) {
    const  history=useHistory()
    const {title,rating,poster,ele,setSelectedMovie}=props;
 
-   
-
-
-
-
     const handleClick=()=>{
         setSelectedMovie(ele)
         history.push("/moviedetails")
